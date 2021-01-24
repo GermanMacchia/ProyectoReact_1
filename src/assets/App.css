@@ -1,0 +1,420 @@
+body{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+
+  /* fuentes */ 
+
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+#header{
+  height: 120px;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  border-top: 5px solid #61dafb;
+}
+
+.center{
+  width: 75%;
+  margin: 0px auto;
+}
+
+.clearfix{
+  clear: both;
+  float: none;
+}
+
+#logo{
+  width: 30%;
+  font-size: 30px;
+  float: left;
+  margin-top: 35px;
+}
+
+#logo img {
+  display: block;
+  float: left;
+  height: 60px;
+  margin-top: -9px;
+  margin-right: -10px;
+  animation: girar infinite 30s linear;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#brand{
+  display: block;
+  margin: 0px;
+  float: left;
+}
+
+#menu {
+  width: 70%;
+  float: right;
+  font-size: 18px;
+}
+
+#menu ul{
+  line-height: 85px;
+  width: 60%;
+  float: right;
+}
+
+#menu ul li{
+  list-style: none;
+  display: inline-block;
+  height: 46px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#menu a{
+  text-decoration: none;
+  color: #444;
+  transition: 300ms all;
+}
+
+#menu a:hover{
+  color: #40c0e4;
+}
+
+#slider {
+  width: 100%;
+  height: 350%;
+  line-height:100px;
+  color: white;
+  text-shadow: 0px 0px 15px #444;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+  background: #7abcff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#slider h1 {
+  margin-top: 0px;
+  padding-top: 50px;
+  padding: 0 px;
+  text-align: center;
+}
+
+.btn-white{
+  background: white;
+  color: blac#494949k;
+  padding: 10px;
+  width: 80px;
+  height: 30px;
+  margin: 0px auto;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-shadow: none;
+  text-decoration: none;
+  line-height: 35px;
+  box-shadow: 0px 0px 5px #ccc;
+  margin-top: 40px;
+  border-radius: 4px;
+  transition: 300ms all;
+}
+
+.btn-white:hover{
+  background: #444;
+  color: white;
+}
+
+.slider-small{
+  height: 150px;
+}
+
+.slider-small h1{
+  padding: 70px;
+  text-align: center;
+}
+
+#content{
+  width: 70%;
+  float: left;
+  min-height: 650px;
+  margin-right: 20px;
+}
+
+#sidebar{
+  width: 25%;
+  float:left;
+}
+
+.sidebar-item{
+  background: #f7f7f7;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.sidebar-item h3 {
+  text-transform: uppercase;
+  font-size: 17px;
+  margin: 0px 0px 10px 0px;
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 10px
+}
+
+.sidebar-item h5{
+font-weight: lighter;
+}
+
+.btn{
+  background: black;
+  color: white;
+  padding: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  max-width: 120px;
+  transition: 300ms all;
+  border: none;
+  cursor: pointer;
+
+}
+
+.sidebar-item .btn{
+  margin-top: 10px;
+  margin: auto;
+}
+
+.btn-success{
+  background: #6EEA74;
+}
+
+.btn-success:hover{
+  background: black;
+}
+
+.mid-form{
+  width:60%;
+  margin: 0px auto;
+}
+
+.mid-form label{
+  display: block;
+  float: left;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+input {
+  margin-top: 30px;
+}
+
+input[type="text"]{
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  padding: 3px;
+  margin: 0px 0px 30px 0px;
+  transition: 300ms all;
+}
+
+input[type="text"]: focus,
+textarea: focus{
+  box-shadow: 0px 0px 5px #444 inset;
+}
+
+input[type="text"], textarea{
+  width: 100%;
+  min-height: 30px;
+  border: 1px solid #ccc;
+  padding: 3px;
+  margin: 0px 0px 30px 0px;
+  transition: 300ms all;
+}
+
+textarea{
+  width: 100%;
+  height: 150px;
+  max-width: 100%;
+  min-width: 100%;
+  max-height:300px;
+  min-height:150px; 
+}
+
+.radiobuttons{
+  float: left;
+  margin-bottom: 10px;
+}
+
+#footer{
+  background: #f7f7f7;
+  width: 100%;
+  height: 70px;
+  line-height: 75px;
+  color: #444;
+}
+
+#footer p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.article-item{
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.article-item .image-wrap{
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  float: left;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+}
+
+.article-item .image-wrap img{
+  height: 100%;
+  text-align: center;
+}
+
+.article-item h2{
+  display: block;
+  width:100%;
+  padding: 0px;
+  margin: 0px 0px 7px 0px;
+}
+
+.article-item .date{
+  display: block;
+  width: 100%;
+  color: #CFBEBE;
+}
+
+.article-item a{
+  display: block;
+  color: #444;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.article-item a:hover{
+  text-decoration: underline;
+}
+
+.subheader{
+  font-size: 38px;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+.article-detail .image-wrap{
+  float: none;
+  width:100%;
+  height: 300px;
+}
+
+.article-detail .image-wrap img{
+  height: auto;
+}
+
+.article-detail .subheader{
+  border: none;
+  padding: 0px;
+  margin: 320px 0px 10px 0px;
+}
+
+/*  RESPONSIVE */
+
+@media (max-width: 1488px){
+  .centrer{
+    width: 85%;
+  }
+} 
+
+@media (max-width: 1338px){
+  .centrer{
+    width: 95%;
+  }
+
+  #menu ul{
+    width: auto;
+  }
+}
+
+@media (max-width: 1018px){
+  #logo{
+    float: none;
+    width: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+
+  #menu,
+  #menu ul{
+    clear: both;
+    float: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 43px;
+  }
+
+  #content{
+    float: none;
+    width: 100%;
+  }
+
+  #sidebar{
+    float: none;
+    width: 60%;
+    margin: 0px auto;
+    margin-bottom: 50px;
+  }
+
+  #slider h1{
+    padding-top: 115px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 562px){
+  #header{
+    min-height: 130px;
+    overflow: hidden;
+  }
+
+  #menu,
+  #menu ul{
+    line-height: 50px;
+  }
+
+  #menu ul li{
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  #slider h1{
+    font-size: 19px;
+    padding-top: 30px;
+  }
+
+  #slider .btn-white{
+    margin-top: 20px;
+  }
+
+} 

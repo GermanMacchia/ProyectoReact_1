@@ -1,0 +1,26 @@
+.image-box {
+	box-sizing: border-box;
+
+	color: #E1D2D2;
+	display: flex;
+	height: 130%;
+	width: 143%;
+	margin: 35px;
+	margin-left: -77px;
+	padding-right: 35px;
+}
+
+.image{
+	height: 100px;
+	width: 100px;
+	border: solid #FFFFFF;
+}
+
+img{
+	height: 150px;
+	width: auto;
+}
+
+.container{
+	border: solid #EBDBDB;
+}
