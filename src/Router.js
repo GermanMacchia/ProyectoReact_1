@@ -6,6 +6,11 @@ import Peliculas from './components/Peliculas';
 import Inicio from './components/Inicio';
 import Error from './components/Error';
 
+import Header from './components/Header';
+import Slider from './components/Slider';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+
 class Router extends Component {
 
 	render(){
@@ -14,42 +19,54 @@ class Router extends Component {
 
 			<BrowserRouter>
 
-				<Switch>
-					<Route exact path="/" component={Inicio} />
-					<Route exact path="/contador" component={Contador} />
-					<Route exact path="/peliculas" component={Peliculas} />
 
-					<Route exact path="/pagina1" render={()=> (
-							<div id="content">
-								<h1 className="subheader">Hola mundo desde la ruta pagina 1</h1>
-								<h1> La ruta puede ser generada desde el mismo switch </h1>
-							</div>
-						)} 
-					/>
+				<Header />
+				<Slider />
+
+				<div className="center">
+					
+					<Switch>
+						<Route exact path="/" component={Inicio} />
+						<Route exact path="/home" component={Inicio} />
+						<Route exact path="/contador" component={Contador} />
+						<Route exact path="/peliculas" component={Peliculas} />
+
+						<Route exact path="/pagina1" render={()=> (
+								<div id="content">
+									<h1 className="subheader">Hola mundo desde la ruta pagina 1</h1>
+									<h1> La ruta puede ser generada desde el mismo switch </h1>
+								</div>
+							)} 
+						/>
 
 
-					<Route exact path="/pruebas/:id/:nombre?" render={(props)=> {
-								var id = props.match.params.id;
-								var nombre = props.match.params.nombre;
+						<Route exact path="/pruebas/:id/:nombre?" render={(props)=> {
+									var id = props.match.params.id;
+									var nombre = props.match.params.nombre;
 
-								return (
-									<div id="content">
-										<h1 className="subheader">Hola mundo desde la página de pruebas</h1>
-										<h1>El id ingresado es: {id}
-											{
-												nombre &&
-												<span> {nombre}</span>
-											}
-										</h1>
-									</div>
-								);
-							}
-						} 
-					/>
+									return (
+										<div id="content">
+											<h1 className="subheader">Hola mundo desde la página de pruebas</h1>
+											<h1>El id ingresado es: {id}
+												{
+													nombre &&
+													<span> {nombre}</span>
+												}
+											</h1>
+										</div>
+									);
+								}
+							} 
+						/>
 
-					<Route component={Error} />
+						<Route component={Error} />
+					</Switch>
 
-				</Switch>
+					<Sidebar />
+	            	<div className="clearfix" />
+	            </div>
+
+            	<Footer />
 			
 			</BrowserRouter>
 		);
