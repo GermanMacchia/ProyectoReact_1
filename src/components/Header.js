@@ -10,7 +10,7 @@ class Header extends Component {
 					<div className="center">
 						{/* Logo */}
 						<div id="logo">
-							<img src={logo} alt="App-logo" alt="Logotipo"></img>
+							<img src={logo} alt="Logotipo" />
 							<span id="brand">
 								<strong>Curso</strong>React
 							</span>
@@ -19,23 +19,20 @@ class Header extends Component {
 						<nav id="menu">
 							<ul>
 								<li>
-									<a href="index.html">Inicio</a>
+									<a href="/">Inicio</a>
 								</li>
 								<li>
-									<a href="blog.html">Blog</a>
+									<a href="/contador">Contador</a>
 								</li>
 								<li>
 									<a href="formulario.html">Formulario</a>
 								</li>
 								<li>
-									<a href="">Pagina 1</a>
-								</li>
-								<li>
-									<a href="">Pagina 2</a>
+									<a href="/peliculas">Peliculas</a>
 								</li>
 							</ul>
 						</nav>
-						<div className="clearfix"></div>
+						<div className="clearfix" />
 					</div>	
 				</header>
 		);

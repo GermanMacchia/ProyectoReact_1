@@ -144,10 +144,11 @@ body{
 }
 
 #content{
-  width: 70%;
+  width: 60%;
   float: left;
   min-height: 650px;
   margin-right: 20px;
+  margin-left: 2em;
 }
 
 #sidebar{

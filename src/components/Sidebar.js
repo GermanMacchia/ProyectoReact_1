@@ -7,7 +7,7 @@ class Sidebar extends Component {
             <aside id="sidebar">
 				<div id="nav-blog" className="sidebar-item">
 					<h3>Puedes hacer esto</h3>
-					<a href="" className="btn btn-success">Crear articulo</a>
+					<a href="creararticulo.html" className="btn btn-success">Crear articulo</a>
 				</div>
 
 				<div id="search" className="sidebar-item">

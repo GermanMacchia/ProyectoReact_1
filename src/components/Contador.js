@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 
-class SeccionPruebas extends Component{
+class Contador extends Component{
 
 
     constructor(props){
@@ -43,4 +43,4 @@ class SeccionPruebas extends Component{
 	}
 }
 
-export default SeccionPruebas;
+export default Contador;
