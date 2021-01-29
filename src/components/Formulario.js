@@ -26,7 +26,7 @@ class Formulario extends Component { //---------------------------------
  		user: {}
  	};
 
- 	/* Se crea un state de un JSON con array vacio */
+ 	/* Se crea un state de un JSON con un set vacio */
 
 	recibirFormulario = (e) => {
 		e.preventDefault();
@@ -95,7 +95,7 @@ Si utilizo el arrow function me ahorro de bindearlo.
 								
 
 							<form className="mid-form" onSubmit={this.recibirFormulario} onChange={this.recibirFormulario}>
-							{/* On submit lo hace cuando se manda. onChangelocambia de forma inmediata y reactiva*/}
+							{/* On submit lo hace cuando se manda. onChange locambia de forma inmediata y reactiva*/}
 								<div className="form-group">
 									<label htmlFor="nombre">Nombre</label>
 									<input type="text" name="nombre" ref={this.nombreRef} />
