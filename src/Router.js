@@ -3,13 +3,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Contador from './components/Contador';
 import Peliculas from './components/Peliculas';
-import Inicio from './components/Inicio';
+import Home from './components/Home';
 import Error from './components/Error';
-
+import Blog from './components/Blog';
 import Header from './components/Header';
-import Slider from './components/Slider';
-import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
+import Formulario from './components/Formulario';
 
 class Router extends Component {
 
@@ -17,19 +16,17 @@ class Router extends Component {
 
 		return(
 
-			<BrowserRouter>
-
+			<BrowserRouter> 
 
 				<Header />
-				<Slider />
-
-				<div className="center">
 					
 					<Switch>
-						<Route exact path="/" component={Inicio} />
-						<Route exact path="/home" component={Inicio} />
+						<Route exact path="/" component={Home} />
+						<Route exact path="/home" component={Home} />
 						<Route exact path="/contador" component={Contador} />
 						<Route exact path="/peliculas" component={Peliculas} />
+						<Route exact path="/blog" component={Blog} />
+						<Route exact path="/formulario" component={Formulario} />
 
 						<Route exact path="/pagina1" render={()=> (
 								<div id="content">
@@ -62,9 +59,7 @@ class Router extends Component {
 						<Route component={Error} />
 					</Switch>
 
-					<Sidebar />
 	            	<div className="clearfix" />
-	            </div>
 
             	<Footer />
 			

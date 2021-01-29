@@ -5,7 +5,7 @@ const Footer = () =>{
 	return(
 		<footer id="footer">
 			<div className="center">
-				<p>&copy; Máster en frameworks en JavaScript</p>
+				<p>&copy; Máster en frameworks de JavaScript</p>
 			</div>
 		</footer>
 	);

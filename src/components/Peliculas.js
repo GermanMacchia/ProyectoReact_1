@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import Pelicula from './Pelicula'
+import Slider from './Slider'
+import Sidebar from './Sidebar'
 
 class Peliculas extends Component {
 	
@@ -34,39 +36,50 @@ class Peliculas extends Component {
 
 	render(){
 		return (
-			<div id= "content" className="peliculas">
+			<>
+			<Slider
+				title= "Peliculas"
+				size= "slider-small"
+			/>
+			<div className="center">
+				<div id= "content" className="peliculas">
 
-				<h2 className = "subheader">Peliculas</h2>
-				<p> Seleccion de Peliculas Favoritas de {this.state.nombre}</p>
-				<p><button onClick={this.cambiarTitulo}>Cambiar Titulo</button></p>
+					<p> Seleccion de Peliculas Favoritas de {this.state.nombre}</p>
+					<p><button onClick={this.cambiarTitulo}>Cambiar Titulo</button></p>
 
-				{
-					this.state.favorita.titulo &&
-						<p className="favorita" style={{
-							background: 'Green', 
-							color: 'white',
-							padding: '10px'
-						}}>
-							<strong>La pelicula favorita es: </strong>
-							<span>{this.state.favorita.titulo}</span>
-						</p> 
-				}
+					{
+						this.state.favorita.titulo &&
+							<p className="favorita" style={{
+								background: 'Green', 
+								color: 'white',
+								padding: '10px'
+							}}>
+								<strong>La pelicula favorita es: </strong>
+								<span>{this.state.favorita.titulo}</span>
+							</p> 
+					}
 
-				<div id="articles" className="Peliculas">
+					<div id="articles" className="Peliculas">
 
-				{
-					this.state.peliculas.map((pelicula, i) => {
-						return (
-							<Pelicula 
-								key= {i} 
-								pelicula= {pelicula}
-								marcarFavorita= {this.favorita} 
-							/>
-						)
-					})
-				}
+					{
+						this.state.peliculas.map((pelicula, i) => {
+							return (
+								<Pelicula 
+									key= {i} 
+									pelicula= {pelicula}
+									marcarFavorita= {this.favorita} 
+								/>
+							)
+						})
+					}
+					</div>
 				</div>
+				<Sidebar 
+					blog= "false"
+				/>
 			</div>
+
+			</>
 		);
 	}
 }
